@@ -1,31 +1,22 @@
 {
-  "name": "social-app-bk",
+  "name": "media",
   "version": "1.0.0",
-  "description": "social-app-k",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "social-fe-install": "npm install --prefix social-fe",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "social-fe": "npm start --prefix social-fe",
-    "heroku-postbuild":
-      "NPM_CONFIG_PRODUCTION=false npm install --prefix social-fe && npm run build --prefix social-fe"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "muhammad umair",
-  "license": "MIT",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config": "^3.3.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-validator": "^6.5.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.19",
-    "request": "^2.88.2",
-    "socket.io": "^2.3.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umairkharak75/media-app.git"
   },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^1.19.4"
-  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umairkharak75/media-app/issues"
+  },
+  "homepage": "https://github.com/umairkharak75/media-app#readme"
 }
