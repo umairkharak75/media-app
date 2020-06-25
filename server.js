@@ -25,7 +25,9 @@ var client = require('socket.io').listen(server);
 // Body parser middleware
 app.use(express.json({ extended: false }))
 //app.use(bodyParser.json());
-app.use("/", express.static(path.join(__dirname, "social-fe")));
+//app.use("/", express.static('social-fe/dist'));
+
+
 
 // DB Config
 // const db = require('./config/keys').mongodb;
@@ -100,10 +102,16 @@ app.use('/api/profile', profile);
 app.use('/api/auth', auth)
 
 app.use('/api/posts', posts);
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "social-fe", "index.html"));
-  });
+// app.use((req, res, next) => {
+//     res.sendFile(path.join(__dirname, "social-fe",'dist','social-fe', "index.html"));
+//   });
   
+  app.use(express.static('social=fe/dist'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'social-fe', 'dist', 'social-fe','index.html'));
+  });
+
 
 //app.listen(port, () => console.log(`Server running on port ${port}`));
 
